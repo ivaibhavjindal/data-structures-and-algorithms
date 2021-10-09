@@ -32,10 +32,11 @@ vector<int> reverseLevelOrder(Node *root)
             // insert front node data in ans
             ans.push_back(x->data);
             // insert left and right childs
-            if (x->left)
-                q.push(x->left);
             if (x->right)
                 q.push(x->right);
+
+            if (x->left)
+                q.push(x->left);
         }
     }
 
